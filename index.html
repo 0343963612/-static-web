@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="StyleSheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>MySite</h1>
+        <h3>Slogan go here...</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a data-section="home">Home</a></li>
+            <li><a data-section="services">Services</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a data-section="link1">Link 1</a>
+                    <a data-section="link2">Link 2</a>
+                    <a data-section="link3">Link 3</a>
+                </div>
+            </li>
+            <li style="float:right"><a data-section="about">About us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hideable-section">
+        <div>Home content</div>
+    </section>
+
+    <section id="services" class="hideable-section">
+        <div>Services content</div>
+    </section>
+
+    <section id="about" class="hideable-section">
+        <div>About content</div>
+    </section>
+
+    <section id="link1" class="hideable-section">
+        <div>Link1 content</div>
+    </section>
+
+    <section id="link2" class="hideable-section">
+        <div>Link2 content</div>
+    </section>
+
+    <section id="link3" class="hideable-section">
+        <div>Link3 content</div>
+    </section>
+
+    <script>
+        $(function() {
+            $('nav ul li a').click(function() {
+                // Lấy section để hiển thị
+                var $section = $('#' + $(this).data('section'));
+
+                // Nếu đang hiện thì không làm gì.
+                // Nếu không, ẩn tất cả các se cho hiện (kiểu fade in) phần mong muốn.
+                if (!$section.is(':visible')) {
+                    $('.hideable-section').hide();
+                    $section.fadeIn();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

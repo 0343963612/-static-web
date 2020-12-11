@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: #666;
+}
+
+
+/* Header/logo tiêu đề */
+
+header {
+    padding: 5px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    height: 120px;
+}
+
+
+/* Tăng kích thước font chữ cho header */
+
+header h1 {
+    font-size: 40px;
+}
+
+header h1,
+h2,
+h3 {
+    color: white;
+}
+
+section {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active),
+.dropdown:hover .dropbtn {
+    color: white;
+    background-color: #4CAF50;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Landing page */
+
+.hideable-section {
+    display: none;
+}
+
+.hideable-section:first-of-type {
+    display: block;
+}
